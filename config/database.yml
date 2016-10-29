@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: rose_production
-  username: rose
+  username: <%= ENV['ROSE_DATABASE_USERNAME'] %>
   password: <%= ENV['ROSE_DATABASE_PASSWORD'] %>
+  socket: /var/run/mysqld/mysqld.sock
